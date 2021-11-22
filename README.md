@@ -22,13 +22,13 @@ https://n3xt3.com
 
 ```$ npm install -g truffle```
 
-    - Truffle documentation: https://www.trufflesuite.com/docs/truffle/overview
+-- Truffle documentation: https://www.trufflesuite.com/docs/truffle/overview
 
 - Ganache CLI
 
 ```$ npm install ganache-cli@latest --global```
 
-    - Ganache documentation: https://github.com/trufflesuite/ganache
+-- Ganache documentation: https://github.com/trufflesuite/ganache
 
 
 
