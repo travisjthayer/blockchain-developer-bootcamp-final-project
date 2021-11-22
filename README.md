@@ -12,6 +12,20 @@ Users can only view those files assigned to that wallet address.
 
 https://eloquent-heisenberg-ac6f73.netlify.app/
 
+## Running Tests
+
+- Clone Directory
+
+```git clone https://github.com/travisjthayer/blockchain-developer-bootcamp-final-project```
+
+- Start Ganache - using port 8545
+
+```$ ganache-cli```
+
+- Perform Truffle Test
+
+```$ truffle test```
+
 ## Running the Project Locally:
 
 ### Prerequisites
@@ -25,6 +39,31 @@ https://eloquent-heisenberg-ac6f73.netlify.app/
 - Ganache CLI - https://github.com/trufflesuite/ganache
 
 ```$ npm install ganache-cli@latest --global```
+
+- Migrate Contracts
+
+```$ truffle migrate --network development```
+
+- Change to Client Directory
+
+```$ cd client```
+
+- Install Dependencies
+
+```$ npm install```
+
+- Start Server
+
+```$ npm run start```
+
+- Browse to site
+
+``` https:\\localhost:3000```
+
+- Login with Metamask Account
+
+    - Note: You will need a funded account.
+    - You can utilize one of the accounts created by ganache and import into Metamask
 
 
 
