@@ -36,3 +36,7 @@ https://n3xt3.com
     - File owners will be able to share a file with other addresses
 - Folders
     - Create folders to better organize files
+- Display Gas Used
+    - Display gas used to upload file
+    - connect using ChainLink to pull current cost
+    - How much does it cost to store document
