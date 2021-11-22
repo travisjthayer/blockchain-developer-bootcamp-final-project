@@ -8,16 +8,19 @@ Users are able to upload files to IPFS through the dApp.  Files are assigned to 
 
 Users can only view those files assigned to that wallet address.
 
-## Deployed version url:
+## URL for Deployed version - Ropsten Test Network:
 
 https://n3xt3.com
 
-## How to run this project locally:
+## Running the Project Locally:
 
 ### Prerequisites
 
 - Node.js >= v14
-- Truffle and Ganache
+- Truffle
+    $ npm install -g truffle
+    - truffle documentation: https://www.trufflesuite.com/docs/truffle/overview
+- Ganache
 
 
 ## Additional Functionality Planned - Not Yet Implemented
