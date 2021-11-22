@@ -18,19 +18,13 @@ https://n3xt3.com
 
 - Node.js >= v14
 
-- Truffle
+- Truffle - https://www.trufflesuite.com/docs/truffle/overview
 
 ```$ npm install -g truffle```
 
--- Truffle documentation: https://www.trufflesuite.com/docs/truffle/overview
-
-- Ganache CLI
+- Ganache CLI - https://github.com/trufflesuite/ganache
 
 ```$ npm install ganache-cli@latest --global```
-
--- Ganache documentation: https://github.com/trufflesuite/ganache
-
-
 
 
 
