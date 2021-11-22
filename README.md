@@ -10,7 +10,7 @@ Users can only view those files assigned to that wallet address.
 
 ## URL for Deployed version - Ropsten Test Network:
 
-https://n3xt3.com
+https://eloquent-heisenberg-ac6f73.netlify.app/
 
 ## Running the Project Locally:
 
