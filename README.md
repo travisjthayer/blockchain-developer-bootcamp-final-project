@@ -1,19 +1,12 @@
-# blockchain-developer-bootcamp-final-project
-Final Project Repository for Consensus Academy Bootcamp 2021
+# Final project - Decentralized File Storage
 
-MOVE Shoes 10k Challenge
+## Deployed version url:
 
-For my final project I will develop an NFT for a fictional shoe company called Move Shoes Inc.
+https://n3xt3.com
 
-Move Shoes will issue a NFT for those who wish to participate in their 10k Challenge.  
+## How to run this project locally:
 
-Participants must complete a 10K road race in order to claim their prize.
+### Prerequisites
 
-NFT will use the OpenZeppelin ERC721 contracts.
-
-React front end.
-
-NFT.Storage to store the NFT Metadata.
-
-Chainlink Oracles to verify race completion via an external API call.
-
+- Node.js >= v14
+- Truffle and Ganache
