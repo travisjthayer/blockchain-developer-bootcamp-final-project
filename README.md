@@ -12,6 +12,10 @@ Users can only view those files assigned to that wallet address.
 
 https://eloquent-heisenberg-ac6f73.netlify.app/
 
+## Screencast
+
+https://n3xt3.com
+
 ## Running Tests
 
 - Clone Directory
@@ -77,16 +81,16 @@ A create-react-app was then installed.
 
 The resulting project structure is as follows:
 
-* Client (React created folder)
+* Client
     - public
     - src
         - React components
         - contractABIs
             - ABIs for deployed smart contracts
         - utils
-            utility helpers
+            - utility helpers
     - package.json
-        Dependencies for site 
+        - Dependencies for site 
 * Contracts
     - Solidity contracts for the project
 * Migrations
@@ -97,6 +101,10 @@ The resulting project structure is as follows:
     - Dependencies for Truffle (compile, migrate and test)
 * truffle-config.js
     - Configuration file for Truffle
+
+## Address for Certificate
+
+* 0xE0b52ED0DA967ff20E102F0cDA6db3c550921524
 
 ## Additional Functionality Planned - Not Yet Implemented
 
