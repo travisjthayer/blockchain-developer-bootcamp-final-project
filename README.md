@@ -65,7 +65,13 @@ https://eloquent-heisenberg-ac6f73.netlify.app/
     - Note: You will need a funded account.
     - You can utilize one of the accounts created by ganache and import into Metamask
 
+## Directory Structure
 
+This project was developed using a standard Truffle application.  A create-react-app was then installed.
+
+* Root Directory
+    - Contracts - Solidity contracts for the project
+    
 
 ## Additional Functionality Planned - Not Yet Implemented
 
