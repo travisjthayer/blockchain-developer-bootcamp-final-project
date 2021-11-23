@@ -75,6 +75,8 @@ A create-react-app was then installed.
 
 ```$ npx create-react-app client```
 
+The resulting project structure is as follows:
+
 * Client (React created folder)
     - public
     - src
