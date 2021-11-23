@@ -22,9 +22,6 @@
  require('dotenv').config();
  const path = require("path");
  
- const infuraUrl = 'https://ropsten.infura.io/v3/process.env.infuraKey';
- const mnemonic = process.env.mnemonic;
- 
  module.exports = {
    // contracts_directory: './src/contracts/',
    contracts_build_directory: path.join(__dirname, "client/src/contractABIs"),
@@ -63,16 +60,16 @@
      // Useful for deploying to a public network.
      // NB: It's important to wrap the provider as a function.
      ropsten: {
-     provider: () => 
-          new HDWalletProvider(
-            process.env.MNEMONIC, 
-            'https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}'
-          ),
-     network_id: 3,       // Ropsten's id
-     gas: 5500000,        // Ropsten has a lower block limit than mainnet
-     confirmations: 0,    // # of confs to wait between deployments. (default: 0)
-     timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-     skipDryRun: true,    // Skip dry run before migrations? (default: false for public nets ) 
+      provider: () => 
+            new HDWalletProvider(
+              process.env.MNEMONIC, 
+              'https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}'
+            ),
+      network_id: 3,       // Ropsten's id
+      gas: 5500000,        // Ropsten has a lower block limit than mainnet
+      confirmations: 0,    // # of confs to wait between deployments. (default: 0)
+      timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: true,    // Skip dry run before migrations? (default: false for public nets ) 
      },
      // Useful for private networks
      // private: {
