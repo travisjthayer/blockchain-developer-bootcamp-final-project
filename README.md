@@ -40,11 +40,11 @@ https://eloquent-heisenberg-ac6f73.netlify.app/
 
 ```$ npm install ganache-cli@latest --global```
 
-#### Migrate Contracts
+### Migrate Contracts
 
 ```$ truffle migrate --network development```
 
-#### Change to Client Directory
+### Change to Client Directory
 
 ```$ cd client```
 
@@ -60,7 +60,7 @@ https://eloquent-heisenberg-ac6f73.netlify.app/
 
 ``` https:\\localhost:3000```
 
-- Login with Metamask Account
+### Login with Metamask Account
 
     - Note: You will need a funded account.
     - You can utilize one of the accounts created by ganache and import into Metamask
