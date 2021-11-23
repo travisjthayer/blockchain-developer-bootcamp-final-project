@@ -18181,6 +18181,12 @@
     "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
   },
   "networks": {
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0xdE32488F1EDE40C68e951BCD0e3D176c4321fb39",
+      "transactionHash": "0x4ff7a4ed875a5aba95c4cef1433f3763cfe0612e23682b3702f96c7bcbeeafdb"
+    },
     "1637616147899": {
       "events": {},
       "links": {},
@@ -18189,7 +18195,7 @@
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-11-23T14:19:17.838Z",
+  "updatedAt": "2021-11-23T16:31:47.952Z",
   "networkType": "ethereum",
   "devdoc": {
     "author": "Travis J. Thayer",

@@ -49,11 +49,11 @@ contract('StorageTest - Chai Tests', ([deployer, user1, user2]) => {
         result2 = await instance.uploadFile(fileName2, fileHash2, fileType2, fileSize2, { from: user2 })
         result3 = await instance.uploadFile('Test File 3', 'QmRdJLEoHPTnyGcK5e2hcLq4azMWw3gj8iuP43R6a5Gm9N', 'pdf', 100, { from: user1 })
 
-        const file1 = await instance.fileData(1)
+        const file1 = await instance.showFileData(1)
         // console.log("Name of file 1: ", file1.fileName)
         // console.log("Owner of file 1: ", file1.owner)
 
-        const file2 = await instance.fileData(2)
+        const file2 = await instance.showFileData(2)
         // console.log("Name of file 2: ", file2.fileName)
         // console.log("Owner of file 2: ", file2.owner)
     })
@@ -95,18 +95,18 @@ contract('StorageTest - Chai Tests', ([deployer, user1, user2]) => {
     })
 
     it('id of file is correct', async () => {
-        const fileData = await instance.fileData(1)
-        assert.equal(fileData.fileId.toNumber(), 1, 'fileId is not correct')
+        const fileData = await instance.showFileData(1)
+        assert.equal(fileData.fileId, 1, 'fileId is not correct')
     })
 
     it('name of file is correct', async () => {
-      const fileData = await instance.fileData(1)
+      const fileData = await instance.showFileData(1)
       // assert.equal(fileData.fileId.toNumber(), 1, 'id is correct')
       assert.equal(fileData.fileName, fileName1, 'fileName is not correct')
     })
 
     it('owner of file is correct', async () => {
-        const fileData = await instance.fileData(1)
+        const fileData = await instance.showFileData(1)
         assert.equal(fileData.fileOwner, user1, 'fileOwner is not correct')
     })
 })
