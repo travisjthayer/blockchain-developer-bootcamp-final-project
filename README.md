@@ -67,7 +67,13 @@ https://eloquent-heisenberg-ac6f73.netlify.app/
 
 ## Directory Structure
 
-This project was developed using a standard Truffle application.  A create-react-app was then installed.
+This project was developed using a standard Truffle application.
+
+```$ truffle init```
+
+A create-react-app was then installed.
+
+```$ npx create-react-app client```
 
 * Client (React created folder)
     - public
