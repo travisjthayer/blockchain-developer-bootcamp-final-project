@@ -69,9 +69,27 @@ https://eloquent-heisenberg-ac6f73.netlify.app/
 
 This project was developed using a standard Truffle application.  A create-react-app was then installed.
 
-* Root Directory
-    - Contracts - Solidity contracts for the project
-    
+* Client
+    React created folder
+    - public
+    - src
+        React components
+        -- contractABIs
+            --- ABIs for deployed smart contracts
+        -- utils
+            utility helpers
+    - package.json
+        Dependencies for site 
+* Contracts
+    - Solidity contracts for the project
+* Migrations
+    - Migration files for Truffle
+* Test
+    - Test files for Truffle
+* package.json
+    - Dependencies for Truffle (compile, migrate and test)
+* truffle-config.js
+    - Configuration file for Truffle
 
 ## Additional Functionality Planned - Not Yet Implemented
 
