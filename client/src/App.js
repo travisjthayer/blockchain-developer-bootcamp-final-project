@@ -61,22 +61,18 @@ class App extends Component {
 
   disconnectWalletHandler = () => {
     console.log("disconnectWalletHandler called")
-    
+
     this.setState({ account: null })
     window.location.reload();
   }
 
   getContractInstance = async (newAccount) => {
-    // console.log("getContractInstance called")
-    // Get the contract instance.
-
-    // need to add something then contract does not exist on chosen network
 
     const web3 = window.web3;
     const networkId = await web3.eth.net.getId();
     console.log("networkId: ", networkId);
     const deployedNetwork = EthStorageContract.networks[networkId];
-    console.log("deployedNetwork: ", deployedNetwork);
+    // console.log("deployedNetwork: ", deployedNetwork);
     
     // if not deployed alerts user
     if(deployedNetwork) {
@@ -84,26 +80,23 @@ class App extends Component {
       // if(true) { // modified to always make true to test hard coded contract address
       const instance = new web3.eth.Contract(EthStorageContract.abi, deployedNetwork.address);
       // testing hardocded address
-      //const instance = new web3.eth.Contract(EthStorageContract.abi, '0x7612446763329edc812b0d96b603909775421233');
-      console.log("contract instance: ", instance);
-      console.log("account: ", newAccount);
+      //const instance = new web3.eth.Contract(EthStorageContract.abi, '0x000');
+      // console.log("contract instance: ", instance);
+      // console.log("account: ", newAccount);
 
-      // get user files - seperate out to new function ??
+      // TODO: create new function for retrieving files
       // Get User Files - returns an array of files for connected account
     
-      //testing simple contract interaction
-      const owner = await instance.methods.owner().call();
-      console.log("contract owner: ", owner);
+      // testing simple contract interaction
+      // const owner = await instance.methods.owner().call();
+      // console.log("contract owner: ", owner);
 
-      
-        console.log("calling retrieve my files from account: ", newAccount)
-        const userFiles = await instance.methods.retrieveMyFiles(newAccount).call();
-        console.log("userFiles: ", userFiles)
-        console.log("# of userFiles: ", userFiles.length)
+      console.log("calling retrieve my files from account: ", newAccount)
+      const userFiles = await instance.methods.retrieveMyFiles(newAccount).call();
+      console.log("userFiles: ", userFiles)
+      console.log("# of userFiles: ", userFiles.length)
 
-        this.setState({ instance: instance });
-        this.setState({ connected: true });
-        this.setState({ userFiles: userFiles });
+      this.setState({ instance: instance, connected: true, userFiles: userFiles });
     
     } else {
       window.alert('Contract Not Deployed to this Network - Switch to Ropsten');
@@ -114,8 +107,6 @@ class App extends Component {
     console.log("getUserFiles called");
     // const userFiles = await instance.methods.retrieveMyFiles(newAccount).call();
   }
-
-
 
   // capture file data for upload
   captureFile = event => {
@@ -137,7 +128,7 @@ class App extends Component {
   }
 
 
-  //Upload File
+  // Upload File
   uploadFile = description => {
     console.log("Submitting file to IPFS...")
     this.setState({ account: this.account })
@@ -145,12 +136,12 @@ class App extends Component {
     //Add file to the IPFS
     ipfs.add(this.state.buffer, (error, result) => {
       // console.log('IPFS result: ', result)
-      console.log("Description: ", description)
+      // console.log("Description: ", description)
       // console.log("Hash: ", result[0].hash)
       // console.log("Current account: ", this.state.account)
-      console.log("File Name: ", this.state.name);
-      console.log("File Type: ", this.state.type);
-      console.log("File Size: ", result[0].size);
+      // console.log("File Name: ", this.state.name);
+      // console.log("File Type: ", this.state.type);
+      // console.log("File Size: ", result[0].size);
 
       if(error) {
         console.error(error)
@@ -171,7 +162,7 @@ class App extends Component {
         .then((response) => {
           // console.log("response: ", response);
           this.setState({ loading: false });
-          // console.log("current state of loading: ", this.state.loading);
+          
           // reload data for updated display
           this.getContractInstance(this.state.account);
         })
