@@ -34,17 +34,15 @@ class App extends Component {
         }) 
     } else {
         // setErrorMessage('Install Metamask');
-        window.alert("You need a web3 browser - try Brave - it's really cool");
+        window.alert("You Need a web3 browser to use this dApp!");
     }
   }
 
   accountChangedHandler = (newAccount) => {
     console.log("accountChangedHandler called")
-    // setDefaultAccount(newAccount);
+  
     this.account = newAccount;
     console.log("accountChangedHandler - setDefaultAccount: ", newAccount);
-    // this.getUserBalance(newAccount.toString());
-    // setConnButtonText('Wallet Connected');
     this.setState({ connButtonText: 'Logout' })
     this.getContractInstance(newAccount);
   }
@@ -55,16 +53,6 @@ class App extends Component {
     window.location.reload();
   }
 
-  getUserBalance = (address) => {
-    window.ethereum.request({ method: 'eth_getBalance', params: [address, 'latest'] })
-    .then(balance => {
-      console.log("Account Balance: ", balance);
-      // this.setState({ userBalance: (ethers.utils.formatEther(balance)) });
-      this.setState({ userBalance: balance });
-    })
-
-  }
-
   chainChangedHandler = () => {
     // when user changes network in Metamask
     // reload the page
@@ -73,6 +61,7 @@ class App extends Component {
 
   disconnectWalletHandler = () => {
     console.log("disconnectWalletHandler called")
+    
     this.setState({ account: null })
     window.location.reload();
   }
