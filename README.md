@@ -22,7 +22,7 @@ https://n3xt3.com
 
 ```git clone https://github.com/travisjthayer/blockchain-developer-bootcamp-final-project```
 
-- Start Ganache - using port 8545
+- Start Ganache - use default port 8545
 
 ```$ ganache-cli```
 
@@ -34,7 +34,7 @@ https://n3xt3.com
 
 ### Prerequisites
 
-- Node.js >= v14
+- Node.js >= v14 - https://nodejs.org
 
 - Truffle - https://www.trufflesuite.com/docs/truffle/overview
 
