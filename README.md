@@ -40,23 +40,23 @@ https://eloquent-heisenberg-ac6f73.netlify.app/
 
 ```$ npm install ganache-cli@latest --global```
 
-- Migrate Contracts
+#### Migrate Contracts
 
 ```$ truffle migrate --network development```
 
-- Change to Client Directory
+#### Change to Client Directory
 
 ```$ cd client```
 
-- Install Dependencies
+### Install Dependencies
 
 ```$ npm install```
 
-- Start Server
+### Start Web Server
 
 ```$ npm run start```
 
-- Browse to site
+### Browse to site
 
 ``` https:\\localhost:3000```
 
