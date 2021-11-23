@@ -22,7 +22,7 @@
  require('dotenv').config();
  const path = require("path");
  
- const infuraKey = process.env.infuraKey;
+ const infuraUrl = 'https://ropsten.infura.io/v3/process.env.infuraKey';
  const mnemonic = process.env.mnemonic;
  
  module.exports = {
@@ -63,7 +63,11 @@
      // Useful for deploying to a public network.
      // NB: It's important to wrap the provider as a function.
      ropsten: {
-     provider: () => new HDWalletProvider(mnemonic, infuraKey),
+     provider: () => 
+          new HDWalletProvider(
+            process.env.MNEMONIC, 
+            'https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}'
+          ),
      network_id: 3,       // Ropsten's id
      gas: 5500000,        // Ropsten has a lower block limit than mainnet
      confirmations: 0,    // # of confs to wait between deployments. (default: 0)
