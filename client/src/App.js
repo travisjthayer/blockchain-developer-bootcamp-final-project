@@ -92,7 +92,7 @@ class App extends Component {
       // console.log("contract owner: ", owner);
 
       console.log("calling retrieve my files from account: ", newAccount)
-      const userFiles = await instance.methods.retrieveMyFiles(newAccount).call();
+      const userFiles = await instance.methods.retrieveMyFiles().call({from: newAccount});
       console.log("userFiles: ", userFiles)
       console.log("# of userFiles: ", userFiles.length)
 

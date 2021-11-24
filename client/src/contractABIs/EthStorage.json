@@ -42,7 +42,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -120,7 +121,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -189,7 +191,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -202,7 +205,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"fileId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"fileName\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"fileOwner\",\"type\":\"address\"}],\"name\":\"FileUploaded\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_to\",\"type\":\"address\"}],\"name\":\"destroyContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTotalFiles\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"retrieveMyFiles\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"fileId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"fileName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"fileType\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"fileSize\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dateUploaded\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"fileOwner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"fileHash\",\"type\":\"string\"}],\"internalType\":\"struct EthStorage.File[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_fileId\",\"type\":\"uint256\"}],\"name\":\"showFileData\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"fileId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"fileName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"fileType\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"fileSize\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dateUploaded\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"fileOwner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"fileHash\",\"type\":\"string\"}],\"internalType\":\"struct EthStorage.File\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_fileName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_fileHash\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_fileType\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"_fileSize\",\"type\":\"uint256\"}],\"name\":\"uploadFile\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Travis J. Thayer\",\"events\":{\"FileUploaded(uint256,string,address)\":{\"params\":{\"fileId\":\"id assigned to the file\",\"fileName\":\"name user assigned to file\",\"fileOwner\":\"address of the uploader\"}}},\"kind\":\"dev\",\"methods\":{\"constructor\":{\"details\":\"assigns contract owner to deployermight be needed for certain administrative functions\"},\"destroyContract(address)\":{\"details\":\"added due to nature of contractactual contract would not contain this functionality\"},\"getTotalFiles()\":{\"details\":\"only present for testing purposesthis type of function would not be present on production version\"},\"showFileData(uint256)\":{\"details\":\"only present for testing purposesthis type of function would not be present on production version\",\"params\":{\"_fileId\":\"fileId to pull data\"}},\"uploadFile(string,string,string,uint256)\":{\"params\":{\"_fileHash\":\"hash value generated for file\",\"_fileName\":\"name given to file\",\"_fileSize\":\"size of file\",\"_fileType\":\"type of file\"}}},\"title\":\"Contract for decentalized file storage\",\"version\":1},\"userdoc\":{\"events\":{\"FileUploaded(uint256,string,address)\":{\"notice\":\"Emitted when a file is uploaded\"}},\"kind\":\"user\",\"methods\":{\"constructor\":{\"notice\":\"constructor function - only called once on deployment\"},\"destroyContract(address)\":{\"notice\":\"function allowing contract owner to terminate contract functionality\"},\"getTotalFiles()\":{\"notice\":\"allows contract owner to check total files uploaded\"},\"retrieveMyFiles()\":{\"notice\":\"retrieves all files for account caller\"},\"showFileData(uint256)\":{\"notice\":\"allows contract owner to check file data\"},\"uploadFile(string,string,string,uint256)\":{\"notice\":\"adds a file assigned to the account calling\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/travisthayer/Ethereum/Consensys-Bootcamp/blockchain-developer-bootcamp-final-project/contracts/EthStorage.sol\":\"EthStorage\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/travisthayer/Ethereum/Consensys-Bootcamp/blockchain-developer-bootcamp-final-project/contracts/EthStorage.sol\":{\"keccak256\":\"0xb49fba2629dad592131a3eb11ff7ee25e3936af5623c4fa283b325d8f28d225b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ddc23e78c02641d3bc91608b9eb454d96252f11ec4fc23f3932fc2d8b4de993d\",\"dweb:/ipfs/QmS2Rkprg1SHfMRJQ3aaf8ivNCJBqzT4FKZLpXFoo5m8q4\"]},\"@openzeppelin/contracts/utils/Counters.sol\":{\"keccak256\":\"0x78450f4e3b722cce467b21e285f72ce5eaf361e9ba9dd2241a413926246773cd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f103065051300cd995fd4599ba91188d4071b92175b52f26110e02db091617c0\",\"dweb:/ipfs/QmSyDz67R2HCypDE8Pacn3voVwxw9x17NM66q47YgBnGqc\"]}},\"version\":1}",
@@ -17828,12 +17832,13 @@
     "1637616147899": {
       "events": {},
       "links": {},
-      "address": "0x25773254f2BA3Ec117E544CABd288dbCC4F8a313",
-      "transactionHash": "0x36f4343b2605859b25669f88d81800b4b20fc1c5be81ea1272f434c6f9814b50"
+      "address": "0xdbbc3c03BF991878b8afE30dC1Adcfa88dA85354",
+      "transactionHash": "0xfca09dfc6c497049e2c7cfe7128b7f86d12b3f35f63eb015a430733e7e013ed3"
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-11-24T15:31:26.068Z",
+  "updatedAt": "2021-11-24T15:56:42.768Z",
+  "networkType": "ethereum",
   "devdoc": {
     "author": "Travis J. Thayer",
     "events": {
