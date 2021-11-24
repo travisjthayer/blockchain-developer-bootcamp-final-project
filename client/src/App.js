@@ -160,14 +160,16 @@ class App extends Component {
         this.state.instance.methods.uploadFile(description, result[0].hash, this.state.type, result[0].size)
         .send({ from: this.state.account })
         .then((response) => {
-          // console.log("response: ", response);
+          console.log("response: ", response);
           this.setState({ loading: false });
           
           // reload data for updated display
           this.getContractInstance(this.state.account);
         })
-        .catch('error', (e) => {
-          window.alert("Error Loading File")
+        .catch((error) => {
+          console.log('catch error called');
+          console.log("error message: ", error.message);
+          window.alert(error.message)
           this.setState({ loading: false })
           })
     
