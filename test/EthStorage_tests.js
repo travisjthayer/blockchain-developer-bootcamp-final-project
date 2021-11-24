@@ -120,7 +120,7 @@ contract('StorageTest - Chai Tests', ([deployer, user1, user2]) => {
   describe('TEST: retrieving files', async () => {
 
     it('successfully retrieves files by account address', async () => {
-        const fileList = await instance.retrieveMyFiles(user1)
+        const fileList = await instance.retrieveMyFiles( {from: user1 })
         // NOTE: only 2 Test files uploaded by user1 account
         assert.equal(fileList.length, 2, 'Not properly retrieving files by account address')
     })

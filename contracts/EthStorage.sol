@@ -75,8 +75,7 @@ contract EthStorage {
     }
   
     /// @notice retrieves all files for account caller
-    /// @param _acct account of caller
-    function retrieveMyFiles(address _acct) public view returns (File[] memory) {
+    function retrieveMyFiles() public view returns (File[] memory) {
         uint256 totalFileCount = _fileIds.current();
         uint256 myFileCount = 0;
         uint256 currentIndex = 0;
@@ -84,7 +83,7 @@ contract EthStorage {
         /// @notice determine the number of files for address
         /// @dev this will be used to set the size of the array
         for (uint i = 1; i <= totalFileCount; i++) {
-            if (fileData[i].fileOwner == _acct) {
+            if (fileData[i].fileOwner == msg.sender) {
                 myFileCount++;
             }
         }
@@ -93,7 +92,7 @@ contract EthStorage {
         File[] memory myFiles = new File[](myFileCount);
         /// @dev loop through files and add to array if fileOwner correct
         for (uint i = 1; i <= totalFileCount; i++) {
-            if (fileData[i].fileOwner == _acct) {
+            if (fileData[i].fileOwner == msg.sender) {
                 uint currentId = fileData[i].fileId;
                 File memory currentFile = fileData[currentId];
                 myFiles[currentIndex] = currentFile;
