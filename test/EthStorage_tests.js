@@ -13,7 +13,7 @@ contract('StorageTest - Chai Tests', ([deployer, user1, user2]) => {
   let fileName3, fileHash3, fileType3, fileSize3
 
   // deploy an instance of the contract
-  // create 2 test files and upload for testing
+  // create 3 test files and upload for testing
   before(async () => {
     instance = await StorageTest.deployed()
 
