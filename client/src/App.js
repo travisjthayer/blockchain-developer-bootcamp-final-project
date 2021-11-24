@@ -137,9 +137,9 @@ class App extends Component {
     ipfs.add(this.state.buffer, (error, result) => {
       // console.log('IPFS result: ', result)
       // console.log("Description: ", description)
+      // console.log("File Name: ", this.state.name);
       // console.log("Hash: ", result[0].hash)
       // console.log("Current account: ", this.state.account)
-      // console.log("File Name: ", this.state.name);
       // console.log("File Type: ", this.state.type);
       // console.log("File Size: ", result[0].size);
 

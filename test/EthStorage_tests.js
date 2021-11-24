@@ -9,6 +9,8 @@ require('chai')
 contract('StorageTest - Chai Tests', ([deployer, user1, user2]) => {
   let instance 
   let fileName1, fileHash1, fileType1, fileSize1
+  let fileName2, fileHash2, fileType2, fileSize2
+  let fileName3, fileHash3, fileType3, fileSize3
 
   // deploy an instance of the contract
   // create 2 test files and upload for testing
@@ -21,15 +23,15 @@ contract('StorageTest - Chai Tests', ([deployer, user1, user2]) => {
     fileType1 = 'pdf'
     fileSize1 = 100
 
-    const fileName2 = 'Test File 2'
-    const fileHash2 = 'QmRdJLEoHPTnyGcK5e2hcLq4azMWw3gj8iuP43R6a5Gm9N'
-    const fileType2 = 'txt'
-    const fileSize2 = 250
+    fileName2 = 'Test File 2'
+    fileHash2 = 'QmdLcykTR4L39f8KXsSPd49SJ49zzsK6MovHkKmJ8saFcY'
+    fileType2 = 'txt'
+    fileSize2 = 250
 
-    const fileName3 = 'Test File 3'
-    const fileHash3 = 'QmRdJLEoHPTnyGcK5e2hcLq4azMWw3gj8iuP43R6a5Gm9N'
-    const fileType3 = 'png'
-    const fileSize3 = 500
+    fileName3 = 'Test File 3'
+    fileHash3 = 'QmWXbgxHvzPnUYFhJx61jz6rzLUXi4PNBq2w4mybLcNWq6'
+    fileType3 = 'png'
+    fileSize3 = 500
 
     // upload 3 test files - 2 from user1 and 1 from user 2
     await instance.uploadFile(fileName1, fileHash1, fileType1, fileSize1, { from: user1 })
@@ -56,7 +58,7 @@ contract('StorageTest - Chai Tests', ([deployer, user1, user2]) => {
   describe('TEST: uploading files', async () => {
  
     it('successfully uploads the test files', async () => {
-        const total = await instance.getTotalFiles( {from: deployer })
+        const total = await instance.getTotalFiles( {from: deployer } )
         assert.equal(total, 3, 'Test files not uploaded')
     })
 
@@ -65,12 +67,24 @@ contract('StorageTest - Chai Tests', ([deployer, user1, user2]) => {
     })
 
     it('successfully requires a file hash', async () => {
-      await instance.uploadFile(fileName1, '', { from: user1 }).should.be.rejected
+      await instance.uploadFile(fileName1, '', fileType1, fileSize1, { from: user1 }).should.be.rejected
+    })
+
+    it('successfully requires a file type', async () => {
+      await instance.uploadFile(fileName1, fileHash1, '', fileSize1, { from: user1 }).should.be.rejected
+    })
+
+    it('successfully requires a file size', async () => {
+      await instance.uploadFile(fileName1, fileHash1, fileType1, '', { from: user1 }).should.be.rejected
+    })
+
+    it('successfully rejects a large file', async () => {
+      await instance.uploadFile(fileName1, fileHash1, fileType1, 100001, { from: user1 }).should.be.rejected
     })
     
   })
 
-  describe('TEST: checks the file data', async () => {
+  describe('TEST: checking file data', async () => {
 
     it('id of file is correct', async () => {
         const fileData = await instance.showFileData(1, { from: deployer })
@@ -79,7 +93,22 @@ contract('StorageTest - Chai Tests', ([deployer, user1, user2]) => {
 
     it('name of file is correct', async () => {
       const fileData = await instance.showFileData(1)
-      assert.equal(fileData.fileName, 'Test File 1', 'fileName is not correct')
+      assert.equal(fileData.fileName, fileName1, 'fileName is not correct')
+    })
+
+    it('type of file is correct', async () => {
+      const fileData = await instance.showFileData(1)
+      assert.equal(fileData.fileType, fileType1, 'fileType is not correct')
+    })
+
+    it('size of file is correct', async () => {
+      const fileData = await instance.showFileData(1)
+      assert.equal(fileData.fileSize, fileSize1, 'fileSize is not correct')
+    })
+
+    it('hash of file is correct', async () => {
+      const fileData = await instance.showFileData(1)
+      assert.equal(fileData.fileHash, fileHash1, 'fileHash is not correct')
     })
 
     it('owner of file is correct', async () => {
@@ -88,12 +117,12 @@ contract('StorageTest - Chai Tests', ([deployer, user1, user2]) => {
     })
 })
 
-  describe('TEST: retrieve files', async () => {
+  describe('TEST: retrieving files', async () => {
 
     it('successfully retrieves files by account address', async () => {
         const fileList = await instance.retrieveMyFiles(user1)
-        // NOTE: 2 Test files uploaded using user1
-        assert.equal(fileList.length, 2, 'Not properly listing files by account address')
+        // NOTE: only 2 Test files uploaded by user1 account
+        assert.equal(fileList.length, 2, 'Not properly retrieving files by account address')
     })
   })
 
