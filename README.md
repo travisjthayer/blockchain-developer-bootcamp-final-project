@@ -22,11 +22,11 @@ https://n3xt3.com
 
 - Truffle - https://www.trufflesuite.com/docs/truffle/overview
 
-```$ npm install -g truffle```
+    ```$ npm install -g truffle```
 
 - Ganache CLI - https://github.com/trufflesuite/ganache
 
-```$ npm install ganache-cli@latest --global```
+    ```$ npm install ganache-cli@latest --global```
 
 ## Installing on Ganache and Performing Truffle Tests
 Following are the steps for setting up the dApp on a local Ganache testnet and performing Truffle tests.
