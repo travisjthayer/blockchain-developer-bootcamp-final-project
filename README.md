@@ -35,7 +35,7 @@ Following are the steps for setting up the dApp on a local Ganache testnet and p
 
 ```$ git clone https://github.com/travisjthayer/blockchain-developer-bootcamp-final-project```
 
-2. Install Dependencies - Note: the package.json in root only contains dependencies for truffle 
+2. Install Dependencies - Note: the package.json in root only contains dependencies for Truffle 
 
 ```$ npm install```
 
@@ -54,23 +54,23 @@ Following are the steps for setting up the dApp on a local Ganache testnet and p
 ## Running the Project on a Local Development Server:
 Following are the steps for running the frontend app on a local development server.
 
-### Change to Client Directory
+1.  Change to Client Directory
 
 ```$ cd client```
 
-### Install Dependencies
+2.  Install Dependencies
 
 ```$ npm install```
 
-### Start Web Server
+3.  Start Web Server
 
 ```$ npm run start```
 
-### Browse to site
+4.  Browse to site
 
 ``` https:\\localhost:3000```
 
-### Login with Metamask Account
+5.  Login with Metamask Account
 
     - Note: You will need a funded account.
     - For local testing you can utilize one of the accounts created by ganache and import into Metamask
@@ -108,7 +108,7 @@ The resulting project structure is as follows:
 * truffle-config.js
     - Configuration file for Truffle
 
-## Address for Certificate
+## Address for Bootcamp Certificate
 
 * 0xE0b52ED0DA967ff20E102F0cDA6db3c550921524
 
