@@ -33,23 +33,23 @@ Following are the steps for setting up the dApp on a local Ganache testnet and p
 
 1. Clone Directory
 
-```$ git clone https://github.com/travisjthayer/blockchain-developer-bootcamp-final-project```
+    ```$ git clone https://github.com/travisjthayer/blockchain-developer-bootcamp-final-project```
 
 2. Install Dependencies - Note: the package.json in root only contains dependencies for Truffle 
 
-```$ npm install```
+    ```$ npm install```
 
 3. Start Ganache - configured to use default port 8545
 
-```$ ganache-cli```
+    ```$ ganache-cli```
 
 4. Migrate Contracts
 
-```$ truffle migrate --network development```
+    ```$ truffle migrate --network development```
 
 5. Perform Truffle Test
 
-```$ truffle test```
+    ```$ truffle test```
 
 ## Running the Project on a Local Development Server
 Following are the steps for running the frontend app on a local development server.
