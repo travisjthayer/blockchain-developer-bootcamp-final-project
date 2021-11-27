@@ -128,6 +128,11 @@ contract('StorageTest - Chai Tests', ([deployer, user1, user2]) => {
 
   describe('TEST: access control', async () => {
 
+    it('allows owner to call onlyOwner function', async () => {
+      const fileNumber = await instance.getTotalFiles( { from: deployer } )
+      assert.equal(fileNumber, 3, 'Owner not able to call onlyOwner function')
+    })
+
     it('prevents another account from calling function with onlyOwner modifier', async () => {
       await instance.getTotalFiles( { from: user1 } ).should.be.rejected
     })

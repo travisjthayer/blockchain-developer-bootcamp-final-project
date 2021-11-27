@@ -16,22 +16,6 @@ https://eloquent-heisenberg-ac6f73.netlify.app/
 
 https://n3xt3.com
 
-## Running Tests
-
-- Clone Directory
-
-```git clone https://github.com/travisjthayer/blockchain-developer-bootcamp-final-project```
-
-- Start Ganache - use default port 8545
-
-```$ ganache-cli```
-
-- Perform Truffle Test
-
-```$ truffle test```
-
-## Running the Project Locally:
-
 ### Prerequisites
 
 - Node.js >= v14 - https://nodejs.org
@@ -44,9 +28,31 @@ https://n3xt3.com
 
 ```$ npm install ganache-cli@latest --global```
 
-### Migrate Contracts
+## Running Tests
+
+- Clone Directory
+
+```$ git clone https://github.com/travisjthayer/blockchain-developer-bootcamp-final-project```
+
+- Install Dependencies - Note: the package.json in root only contains dependencies for truffle deployment
+
+```$ npm install```
+
+- Start Ganache - use default port 8545
+
+```$ ganache-cli```
+
+- Migrate Contracts
 
 ```$ truffle migrate --network development```
+
+- Perform Truffle Test
+
+```$ truffle test```
+
+## Running the Project Locally:
+
+
 
 ### Change to Client Directory
 

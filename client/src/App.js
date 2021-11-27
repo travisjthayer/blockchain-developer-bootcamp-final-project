@@ -167,9 +167,10 @@ class App extends Component {
           this.getContractInstance(this.state.account);
         })
         .catch((error) => {
-          console.log('catch error called');
           console.log("error message: ", error.message);
+          // shows user error message
           window.alert(error.message)
+          // reloads site upon dismissal of alert
           this.setState({ loading: false })
           })
     
