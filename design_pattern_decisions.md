@@ -4,6 +4,8 @@
 
 - `onlyOwner` modifier used to limit certain functionality to the contract deployer.  For testing purposes, the `onlyOwner` modifier applies to the following functions: `destroyContract` and `getAllFiles`.
 
+Another option is to inherit from OpenZeppelin `Ownable`.  Since the contract is already utilizing OpenZeppelin `Counters` access control was implemented using a local modifier.
+
 Note that these functions would unlikely be present in a production version of this type of contract.  However, for testing purposes these are important due to the nature of the dApp.
 
 Other administrative functions may be needed in a production version such as contract upgradability.
