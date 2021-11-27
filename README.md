@@ -8,7 +8,7 @@ Users are able to upload files to IPFS through the dApp.  Files are assigned to 
 
 Users can only view those files assigned to that wallet address.
 
-## URL for Deployed version - Ropsten Test Network:
+## URL for Deployed Version - Ropsten Test Network:
 
 https://eloquent-heisenberg-ac6f73.netlify.app/
 
@@ -16,7 +16,7 @@ https://eloquent-heisenberg-ac6f73.netlify.app/
 
 https://n3xt3.com
 
-### Prerequisites
+## Prerequisites
 
 - Node.js >= v14 - https://nodejs.org
 
@@ -51,7 +51,7 @@ Following are the steps for setting up the dApp on a local Ganache testnet and p
 
 ```$ truffle test```
 
-## Running the Project on a Local Development Server:
+## Running the Project on a Local Development Server
 Following are the steps for running the frontend app on a local development server.
 
 1.  Change to Client Directory
@@ -73,7 +73,7 @@ Following are the steps for running the frontend app on a local development serv
 5.  Login with Metamask Account
 
     - Note: You will need a funded account.
-    - For local testing you can utilize one of the accounts created by ganache and import into Metamask
+    - For local testing you can utilize one of the accounts created by Ganache and import into Metamask
 
 ## Directory Structure
 
