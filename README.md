@@ -28,13 +28,14 @@ https://n3xt3.com
 
 ```$ npm install ganache-cli@latest --global```
 
-## Running Tests
+## Installing on Ganache and Performing Truffle Tests
+Following are the steps for setting up the dApp on a local Ganache testnet and performing Truffle tests.
 
 - Clone Directory
 
 ```$ git clone https://github.com/travisjthayer/blockchain-developer-bootcamp-final-project```
 
-- Install Dependencies - Note: the package.json in root only contains dependencies for truffle deployment
+- Install Dependencies - Note: the package.json in root only contains dependencies for truffle 
 
 ```$ npm install```
 
@@ -50,9 +51,8 @@ https://n3xt3.com
 
 ```$ truffle test```
 
-## Running the Project Locally:
-
-
+## Running the Project on a Local Development Server:
+Following are the steps for running the frontend app on a local development server.
 
 ### Change to Client Directory
 
@@ -73,7 +73,7 @@ https://n3xt3.com
 ### Login with Metamask Account
 
     - Note: You will need a funded account.
-    - You can utilize one of the accounts created by ganache and import into Metamask
+    - For local testing you can utilize one of the accounts created by ganache and import into Metamask
 
 ## Directory Structure
 
