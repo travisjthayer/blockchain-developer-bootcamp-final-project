@@ -56,19 +56,19 @@ Following are the steps for running the frontend app on a local development serv
 
 1.  Change to Client Directory
 
-```$ cd client```
+    ```$ cd client```
 
 2.  Install Dependencies
 
-```$ npm install```
+    ```$ npm install```
 
 3.  Start Web Server
 
-```$ npm run start```
+    ```$ npm run start```
 
 4.  Browse to site
 
-``` https:\\localhost:3000```
+    ``` https:\\localhost:3000```
 
 5.  Login with Metamask Account
 
