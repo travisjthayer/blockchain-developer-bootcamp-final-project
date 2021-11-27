@@ -1,4 +1,4 @@
-# Final project - EthStorage
+# Final Project - EthStorage
 
 This is my final project for the 2021 Blockchain Developer Bootcamp.
 
@@ -8,7 +8,7 @@ Users are able to upload files to IPFS through the dApp.  Files are assigned to 
 
 Users can only view those files assigned to that wallet address.
 
-## URL for Deployed Version - Ropsten Test Network:
+## URL for Deployed Version - Ropsten Test Network
 
 https://eloquent-heisenberg-ac6f73.netlify.app/
 
