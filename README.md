@@ -31,23 +31,23 @@ https://n3xt3.com
 ## Installing on Ganache and Performing Truffle Tests
 Following are the steps for setting up the dApp on a local Ganache testnet and performing Truffle tests.
 
-- Clone Directory
+1. Clone Directory
 
 ```$ git clone https://github.com/travisjthayer/blockchain-developer-bootcamp-final-project```
 
-- Install Dependencies - Note: the package.json in root only contains dependencies for truffle 
+2. Install Dependencies - Note: the package.json in root only contains dependencies for truffle 
 
 ```$ npm install```
 
-- Start Ganache - use default port 8545
+3. Start Ganache - configured to use default port 8545
 
 ```$ ganache-cli```
 
-- Migrate Contracts
+4. Migrate Contracts
 
 ```$ truffle migrate --network development```
 
-- Perform Truffle Test
+5. Perform Truffle Test
 
 ```$ truffle test```
 
