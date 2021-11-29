@@ -14,7 +14,7 @@ https://elegant-haibt-c4a96b.netlify.app/
 
 ## Screencast
 
-https://n3xt3.com
+https://youtu.be/J48GwOp9CYE
 
 ## Prerequisites
 
